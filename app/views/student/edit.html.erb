@@ -1,0 +1,41 @@
+<h1>edit <%= @student.first_name %> info</h1>
+<% if flash[:errors] %>
+<% flash[:errors].each do |e| %>
+<p><%= e %></p>
+<% end %>
+<% end %>
+
+<%=form_for(@student) do |f| %>
+	<p>
+		<%=f.label :first_name%>
+        <%=f.text_field :first_name%>
+
+	</p>
+	<p>
+		<%=f.label :last_name%>
+        <%=f.text_field :last_name%>
+	</p>
+    <p>
+		<%=f.label :age%>
+        <%=f.text_field :age%>
+	</p>
+    <p>
+		<%=f.label :department%>
+        <%=f.text_field :department%>
+	</p>
+    <p>
+		<%=f.label :year%>
+        <%=f.text_field :year%>
+	</p>
+	<p>
+		<%=f.label :advisor_id%>
+        <%=f.text_field :advisor_id%>
+	</p>
+	<p>
+		<%=f.label :room_id%>
+        <%=f.text_field :room_id%>
+	</p>
+    
+	<%=f.submit%>
+<%end%>
+<a href="/student">Go back</a>

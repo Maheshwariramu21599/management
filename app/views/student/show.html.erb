@@ -1,0 +1,28 @@
+<h1>profile for <%= @student.first_name%></h1>
+<table>
+<thead>
+<tr>
+<td>first name</td>
+<td> last name</td>
+<td>age</td>
+<td> department</td>
+<td>year</td>
+<td>Advisor</td>
+<td>Room</td>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+
+<td><%=  @student.first_name %></td>
+<td><%=  @student.last_name %></td>
+<td><%=  @student.age %></td>
+<td><%=  @student.department %></td>
+<td><%=  @student.year %></td>
+<td><%=  @student.advisor_id %></td>
+<td><%=  @student.room_id %></td>
+</tr>
+</tbody>
+</table>
+<a href="/student">Home page</a>

@@ -1,0 +1,30 @@
+<h1>There are <%= @advisor.count %>  Advisors in a hostel</h1>
+<table>
+	<thead>
+		<tr>
+			<td>First name</td>
+			<td>Last name</td>
+            <td>Age</td>
+			<td>Actions</td>
+		</tr>
+	</thead>
+		<body>
+			<% @advisor.each do  |advisor| %>
+			<tr>
+				<td><%= advisor.first_name %></td>
+				<td><%= advisor.last_name %></td>
+                <td><%= advisor.age %></td>
+				<td> 
+				<a href ="/advisor/<%= advisor.id %>">show</a>
+				<a href ="/advisor/<%= advisor.id %>/edit">edit</a>
+				<a href ="/advisor/<%= advisor.id %>" data-method="delete" data-confirm="Are you sure?">delete</a>
+				</td>
+			</tr>
+			<% end %>
+		</body>
+	
+</table>
+
+<a href="/advisor/new">New advisor</a>
+<br>
+<a href="/">Home page</a>

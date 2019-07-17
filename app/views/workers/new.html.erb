@@ -1,0 +1,30 @@
+
+
+<h1>insert the new worker</h1>
+<% if flash[:errors] %>
+<% flash[:errors].each do |e| %>
+<p><%= e %></p>
+<% end %>
+<% end %>
+<form action="/workers" method="post">
+
+	<p>
+		<label>First name:</label>
+		<input type="text" name="worker[first_name]">
+	</p>
+    <p>
+		<label>Last name:</label>
+		<input type="text" name="worker[last_name]">
+	</p>
+	<p>
+		<label>Age:</label>
+		<input type="text" name="worker[age]">
+	</p>
+    <p>
+		<label>Team:</label>
+		<input type="text" name="worker[team]">
+	</p>
+    
+	<input type="submit" value="create">
+</form>
+<a href="/workers">Home page</a>

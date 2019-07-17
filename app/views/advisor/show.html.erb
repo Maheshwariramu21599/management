@@ -1,0 +1,19 @@
+<h1>profile for <%= @advisor.first_name%></h1>
+<table>
+<thead>
+<tr>
+<td>first name</td>
+<td> last name</td>
+<td>age</td>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><%=  @advisor.first_name %></td>
+<td><%=  @advisor.last_name %></td>
+<td><%=  @advisor.age %></td>
+</tr>
+</tbody>
+</table>
+<a href="/advisor">Home page</a>

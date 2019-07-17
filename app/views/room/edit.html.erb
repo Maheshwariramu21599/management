@@ -1,0 +1,22 @@
+<h1>edit <%= @room.room_no %> info</h1>
+<% if flash[:errors] %>
+<% flash[:errors].each do |e| %>
+<p><%= e %></p>
+<% end %>
+<% end %>
+
+<%=form_for(@room) do |f| %>
+	<p>
+		<%=f.label :room_no%>
+        <%=f.text_field :room_no%>
+
+	</p>
+	<p>
+		<%=f.label :room_type%>
+        <%=f.text_field :room_type%>
+
+	</p>
+	
+	<%=f.submit%>
+<%end%>
+<a href="/room">Go back</a>

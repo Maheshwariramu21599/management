@@ -1,0 +1,20 @@
+<h1>insert the new room</h1>
+<% if flash[:errors] %>
+<% flash[:errors].each do |e| %>
+<p><%= e %></p>
+<% end %>
+<% end %>
+<form action="/room" method="post">
+
+	<p>
+		<label>Room number:</label>
+		<input type="text" name="room[room_no]">
+	</p>
+	<p>
+		<label>Room type:</label>
+		<input type="text" name="room[type]">
+	</p>
+    
+	<input type="submit" value="create">
+</form>
+<a href="/room">Home page</a>

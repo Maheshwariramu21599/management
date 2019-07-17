@@ -1,0 +1,27 @@
+<h1>tThere are <%= @Room.count %> Rooms in a hostel</h1>
+<table>
+	<thead>
+		<tr>
+			<td>Room</td>
+            <td>Room Type</td>
+		</tr>
+	</thead>
+		<body>
+			<% @Room.each do  |room| %>
+			<tr>
+				<td><%= room.room_no %></td>
+                <td><%= room.room_type %></td>
+				<td> 
+				<a href ="/room/<%= room.id %>">show</a>
+				<a href ="/room/<%= room.id %>/edit">edit</a>
+				<a href ="/room/<%= room.id %>" data-method="delete" data-confirm="Are you sure?">delete</a>
+				</td>
+			</tr>
+			<% end %>
+		</body>
+	
+</table>
+
+<a href="/room/new">New room</a>
+<br>
+<a href="/">Home page</a>

@@ -1,0 +1,20 @@
+<h1>profile for <%= @workers.first_name%></h1>
+<table>
+<thead>
+<tr>
+<td> first_name </td>
+<td> last_name </td>
+<td> age </td>
+<td> team </td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><%=  @workers.first_name %></td>
+<td><%=  @workers.last_name %></td>
+<td><%=  @workers.age %></td>
+<td><%=  @workers.team %></td>
+</tr>
+</tbody>
+</table>
+<a href="/workers">Home page</a>
